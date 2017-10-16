@@ -111,7 +111,9 @@
             "16",
             "17",
             "18",
-            "19"});
+            "19",
+            "20",
+            "21"});
             this.cbxMaxZoom.Location = new System.Drawing.Point(182, 155);
             this.cbxMaxZoom.Name = "cbxMaxZoom";
             this.cbxMaxZoom.Size = new System.Drawing.Size(86, 20);

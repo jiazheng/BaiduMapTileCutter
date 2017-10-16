@@ -14,3 +14,4 @@ D:\Documents\GitHub\BaiduMapTileCutter\BaiduMapTileCutter\obj\Release\BaiduMapTi
 D:\Documents\GitHub\BaiduMapTileCutter\BaiduMapTileCutter\obj\Release\BaiduMapTileCutter.csproj.CoreCompileInputs.cache
 D:\Documents\GitHub\BaiduMapTileCutter\BaiduMapTileCutter\obj\Release\BaiduMapTileCutter.exe
 D:\Documents\GitHub\BaiduMapTileCutter\BaiduMapTileCutter\obj\Release\BaiduMapTileCutter.pdb
+D:\Documents\GitHub\BaiduMapTileCutter\BaiduMapTileCutter\obj\Release\BaiduMapTileCutter.csprojResolveAssemblyReference.cache
