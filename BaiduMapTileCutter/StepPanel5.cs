@@ -120,16 +120,28 @@ namespace BaiduMapTileCutter
 
         private void cbxMinZoom_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cbxMinZoom.SelectedItem == null)
+            {
+                return;
+            }
             zoomInfo.MinZoom = Int32.Parse((string)cbxMinZoom.SelectedItem);
         }
 
         private void cbxMaxZoom_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cbxMaxZoom.SelectedItem == null)
+            {
+                return;
+            }
             zoomInfo.MaxZoom = Int32.Parse((string)cbxMaxZoom.SelectedItem);
         }
 
         private void cbxImageOriginZoom_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cbxImageOriginZoom.SelectedItem == null)
+            {
+                return;
+            }
             zoomInfo.ImageZoom = Int32.Parse((string)cbxImageOriginZoom.SelectedItem);
         }
     }

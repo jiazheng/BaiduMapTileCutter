@@ -177,10 +177,21 @@ namespace BaiduMapTileCutter
                     double factor = Math.Pow(2, i - zoomInfo.ImageZoom);
                     newSize.Width = (int)Math.Round(imgWidth * factor);
                     newSize.Height = (int)Math.Round(imgHeight * factor);
+                    if (newSize.Width < 256 || newSize.Height < 256)
+                    {
+                        // 图片尺寸过小不再切了
+                        Console.WriteLine("尺寸过小，跳过");
+                        continue;
+                    }
                     Console.WriteLine(tileImage.Height + ", " + tileImage.Width);
                     image = new Bitmap(tileImage, newSize);
                 }
                 cutImage(image, i);
+            }
+            if (finishCount != totalCount)
+            {
+                Console.WriteLine("修正完成的网格数");
+                finishCount = totalCount;
             }
         }
 

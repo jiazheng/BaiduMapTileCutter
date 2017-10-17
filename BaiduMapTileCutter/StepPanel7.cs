@@ -101,6 +101,10 @@ namespace BaiduMapTileCutter
 
         private void progressTimer_Tick(object sender, EventArgs e)
         {
+            if (cutter.GetTotalCount() == 0)
+            {
+                return;
+            }
             progressBar.Value = (int)Math.Round((double)cutter.GetFinishCount() * 100 / (double)cutter.GetTotalCount());
             // Console.WriteLine(cutter.GetFinishCount() + ", " + cutter.GetTotalCount());
             if (cutter.GetFinishCount() == cutter.GetTotalCount())

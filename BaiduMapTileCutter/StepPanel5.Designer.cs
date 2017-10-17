@@ -82,7 +82,9 @@
             "16",
             "17",
             "18",
-            "19"});
+            "19",
+            "20",
+            "21"});
             this.cbxImageOriginZoom.Location = new System.Drawing.Point(182, 181);
             this.cbxImageOriginZoom.Name = "cbxImageOriginZoom";
             this.cbxImageOriginZoom.Size = new System.Drawing.Size(86, 20);
