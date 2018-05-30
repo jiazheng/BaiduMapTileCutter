@@ -59,7 +59,6 @@ namespace BaiduMapTileCutter
 
         public void StartCut()
         {
-            DeleteCurrentFiles();
             totalZoom = zoomInfo.MaxZoom - zoomInfo.MinZoom + 1;
             totalCount = 0;
             for (int i = zoomInfo.MinZoom; i <= zoomInfo.MaxZoom; i++)
@@ -245,8 +244,9 @@ namespace BaiduMapTileCutter
                     int offsetX = (int)eachTileCoords.X * 256 + pxDiff.Width + halfWidth;
                     int offsetY = halfHeight - ((int)eachTileCoords.Y * 256 + pxDiff.Height) - 256;
                     copyImagePixel(img, imgFile, offsetX, offsetY);
-                    img.Save(outputPath + "/tiles/" + zoom.ToString()
-                        + "/tile-" + eachTileCoords.X.ToString() + "_" + eachTileCoords.Y.ToString() + ".png");
+                    string imgFileName = outputPath + "/tiles/" + zoom.ToString()
+                        + "/tile-" + eachTileCoords.X.ToString() + "_" + eachTileCoords.Y.ToString() + ".png";
+                    img.Save(imgFileName, System.Drawing.Imaging.ImageFormat.Png);
                     img.Dispose();
                     finishCount++;
                 }
