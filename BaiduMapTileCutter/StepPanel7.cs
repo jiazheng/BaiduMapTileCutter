@@ -105,7 +105,9 @@ namespace BaiduMapTileCutter
             {
                 return;
             }
-            progressBar.Value = (int)Math.Round((double)cutter.GetFinishCount() * 100 / (double)cutter.GetTotalCount());
+            var down = (int)Math.Round((double)cutter.GetFinishCount() * 100 / (double)cutter.GetTotalCount());
+            down = down > 100 ? 100 : down;
+            progressBar.Value = down;
             // Console.WriteLine(cutter.GetFinishCount() + ", " + cutter.GetTotalCount());
             if (cutter.GetFinishCount() == cutter.GetTotalCount())
             {
