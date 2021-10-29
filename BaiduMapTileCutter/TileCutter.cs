@@ -60,6 +60,7 @@ namespace BaiduMapTileCutter
         public void StartCut()
         {
             totalZoom = zoomInfo.MaxZoom - zoomInfo.MinZoom + 1;
+            finishCount = 0;
             totalCount = 0;
             for (int i = zoomInfo.MinZoom; i <= zoomInfo.MaxZoom; i++)
             {
@@ -151,6 +152,7 @@ namespace BaiduMapTileCutter
                 htmlFile.WriteLine("var map = new BMap.Map('map');");
                 htmlFile.WriteLine("map.addTileLayer(tileLayer);");
             }
+            htmlFile.WriteLine("map.enableScrollWheelZoom(true);");
             htmlFile.WriteLine("map.addControl(new BMap.NavigationControl());");
             htmlFile.WriteLine("map.centerAndZoom(new BMap.Point(" + center.ToString() + "), " +
                 zoomInfo.ImageZoom + ");");
